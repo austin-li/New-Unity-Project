@@ -25,9 +25,9 @@ public class P1 : MonoBehaviour {
         } else if (Input.GetKey("d")) {
             rb2d.transform.position += Vector3.right * 0.1f;
         }
-        if (Input.GetKey("space"))
-        {
+        if (Input.GetKey("space")) {
             transform.position = new Vector3(0, 0, 0);
+            station1 = false;
         }
         if (station1 == true) {
             gameObject.transform.position = new Vector3(-6.883f, -0.339f, 0);
