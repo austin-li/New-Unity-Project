@@ -5,6 +5,7 @@ using UnityEngine;
 public class P1 : MonoBehaviour {
 
     public float speed;
+    public bool station1 = false;
 
     private Rigidbody2D rb2d;
 
@@ -23,6 +24,13 @@ public class P1 : MonoBehaviour {
             rb2d.transform.position += Vector3.left * 0.1f;
         } else if (Input.GetKey("d")) {
             rb2d.transform.position += Vector3.right * 0.1f;
+        }
+        if (Input.GetKey("space"))
+        {
+            transform.position = new Vector3(0, 0, 0);
+        }
+        if (station1 == true) {
+            gameObject.transform.position = new Vector3(-6.883f, -0.339f, 0);
         }
 
     }
